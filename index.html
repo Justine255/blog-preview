@@ -43,6 +43,7 @@
         display: flex;
         flex-direction: column;
         padding: 20px;
+        line-height: 0.8;
       }
       img {
         border-radius: 8px;
@@ -59,12 +60,52 @@
         border-radius: 6px;
         width: 20%;
       }
+      .image-info {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+      }
       .attribution {
         font-size: 11px;
         text-align: center;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
+      }
+      @media (max-width: 375px) {
+        .attribution {
+          font-size: 11px;
+          text-align: center;
+        }
+        .attribution a {
+          color: hsl(228, 45%, 44%);
+        }
+        .container {
+          background-color: hsl(212, 45%, 89%);
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .blog-preview {
+          height: 70%;
+          width: 320px;
+          background-color: white;
+          box-shadow: 10px 10px 5px black;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          padding: 20px;
+          line-height: 0.8;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Figtree", sans-serif;
+        }
       }
     </style>
   </head>
@@ -79,13 +120,17 @@
           These languages are the backbone of every website, defining structure,
           content, and presentation.
         </p>
-        <p><img src="assets/images/image-avatar.webp" alt="" />Greg Hooper</p>
+        <div class="image-info">
+          <img src="assets/images/image-avatar.webp" alt="" />
+          <p><b>Greg Hooper</b></p>
+        </div>
 
         <div class="attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
+          >. Coded by
+          <a href="https://github.com/" target="_blank">Justine Sedillo</a>.
         </div>
       </div>
     </div>
